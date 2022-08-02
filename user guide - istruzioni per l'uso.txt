@@ -1,0 +1,47 @@
+EN:
+This folder contains 3 python files and 1 subfolder, in which sample files are present.
+
+To be more specific, the python files are:
+-sendreceive.py, a library which contains the functions send() and receive() which are used by the client and the server;
+-UDP_socket_client.py, the client which will send the server the users' requests and recieve the server's answers;
+-UDP_socket_server.py, the server which will answer the requests coming from the client accordingly.
+
+The Server subfolder contains some sample files which the server will consider as its own.
+If you wish to do so, you can add any files to the subfolder.
+If the directory is not present by any chance as the server begins to operate or if there are no files in it, the user will recieve a notice and the Python file's execution shall be interrupted.
+This control is repeated only after a client sent a user's request to the server and if the favorable conditions are not present, both sockets shall be closed.
+
+Both the client and the server have been made so that they do not need the use of arguments at their activation to work as intended.
+However, they both need to be active at the same time to use their functionalities.
+The client can cease its execution by sending the command bye to the server when possible.
+On the other hand, the server has to be shut down manually by the user, as after the server recieves a bye command it will wait for a new client to interact with.
+If UDP_socket_server.py is used from command line, it must be activated in the directory it is in, otherwise the server will not find the Server subfolder, required for the correct execution of the application.
+
+Please note: the server has been designed to answer accordingly ONLY TO ONE client, as no multithreading has been implemented:
+if more clients are used at the same time, the answers will be given only to the last client who sent a request, which might result in wrong answers being given.
+DO NOT DELETE THE SERVER DIRECTORY OR ITS FILES WHILE UPLOADING OR DOWNLOADING PROCEDURES ARE ABOUT TO BEGIN AND/OR OCCURRING.
+DO NOT DELETE sendreceive.py OR ELSE THE FUNCTIONS send() AND receive() WILL NOT BE DEFINED.
+
+IT:
+Questa cartella contiene 3 file python e 1 una sottocartella, in cui sono presenti dei file di esempio.
+
+Nello specifico, i file python sono:
+-sendreceive.py, una libreria che contiene le funzioni send() e receive() che vengono usate sia dal client che dal server;
+-UDP_socket_client.py, il client che manderà le richeste degli utenti al server e riceverà le risposte di quest'ultimo;
+-UDP_socket_server.py, il server che risponderà alle richieste inoltrate dal client in modo appropriato.
+
+La cartella Server contiene dei file di esempio che saranno considerati propri del server.
+Se lo si desidera, si puo aggiungere alla sottocartella qualunque file.
+Se la cartella non dovesse essere presente all'inizio dell'esecuzione del server o non dovesse contenere alcun file, l'utente verrà informato e l'esecuzione del file Python sarà interrotta.
+Questo controllo verrà ripetuto dopo che il client ha inviato la richiesta al server e nel caso non ci dovessero essere i presupposti, entrambi i socket verranno chiusi.
+
+Sia il client che il server sono stati realizzati da far in modo che non vi sia bisogno di argomenti alla loro attivazione per funzionare adeguatamente.
+Devono però essere entrambi attivi allo stesso tempo per poter usare le loro funzionalità.
+L'utente può interrompere l'esecuzione del client facendo mandare il comando bye al server quando ne viene data la possibilità.
+D'altra parte il server deve venir chiuso manualmente dall'utente, dato che dopo aver ricevuto un comando bye il server attenderà un nuovo client con cui interagire.
+UDP_socket_server.py se usato da linea di comando è da utilizzare dalla cartella in cui si trova e non altrove, altrimenti il server non troverà la cartella Server, fondamentale per il funzionamento del programma.
+
+Nota bene: il server è stato realizzato in modo da rispondere adeguatamente ad UN SOLO client, dato che non sono state implementate forme di multithreading:
+Se più client dovessero essere usati in tandem, le risposte del server andrebbero solo all'ultimo client che ha inviato una richiesta, il che potrebbe far sì che vengano date risposte sbagliate.
+NON ELIMINARE LA CARTELLA SERVER O I SUOI FILE MENTRE L'UPLOAD O IL DOWNLOAD STANNO PER INIZIARE E/O SONO IN CORSO.
+NON ELIMINARE sendreceive.py ALTRIMENTI LE FUNZIONI send() E receive() NON SARANNO DEFINITE.
